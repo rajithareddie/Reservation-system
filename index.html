@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+     <head> <title> Reservation System </title></head>
+      <body ng-app=”app”>
+        <div ng-controller=”searchController”>
+            <ol>
+                <li ng-repeat=”flightDetails in details | filter:search”></li>
+                    <h1>  {{from}}  </h1>
+                     <h1>  {{to}} </h1>
+                    <h2> {{details.no _of _stops }}</h2>
+                     <h2> {{details.price}} </h2>
+                     <h2> {{ details.timings}} </h2>
+             </ol>
+            <form>
+               <label> From </label>
+                  <input type=”text’ ng-model=”from”/>
+               <label> To: </label> 
+                   <input type=”text’ ng-model=”to”/>
+                <label> No of stops: </label> 
+                    <input type =”text” ng-model =”no_of_stops”/>
+                <label> timings: </label> 
+                    <input type=”text ng-model=”timings”/>
+                 <label> Search Flights: </label> 
+                  < button type=”text” ng-click=”searchFlights()”> Search </button>
+              </form>
+          </div>
+       <script src=”app.js” type=”text/script></script>
+      <script src=”https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js”></script>
+       </body>
+</html>
